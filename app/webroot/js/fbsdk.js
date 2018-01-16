@@ -56,6 +56,7 @@ function checkLoginState() {
 
 function checkLoginState2() {
 		FB.getLoginStatus(function(response) {
+		    console.log(response);
 			if (response.status !== 'connected') {
                  $.ajax({
                             url: SITEPATH + "users/logout/",

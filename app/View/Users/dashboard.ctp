@@ -130,6 +130,14 @@
     <?php echo $this->Html->script('countDown.js');?>
 <script>
     window.fbAsyncInit = function() {
+            FB.init({
+                appId: '307005293152978',
+                autoLogAppEvents: true,
+                status: true,
+                xfbml: true,
+                version: 'v2.9'
+              });
+              
             checkLoginState2();
 			checkEarning();  
     };

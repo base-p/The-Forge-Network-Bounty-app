@@ -224,4 +224,10 @@ class UsersController extends AppController {
             $this->redirect(array('controller' => 'users', 'action' => 'index','admin'=>1));       
         
         }
+     function logout() {
+            $this->autoRender = false;
+            $this->Auth->logout();
+            $this->redirect(array('controller' => 'users', 'action' => 'index'));       
+        
+        }
 }

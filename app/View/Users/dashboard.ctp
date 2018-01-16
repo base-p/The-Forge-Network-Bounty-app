@@ -26,6 +26,7 @@
                         <li class='c-dashboardMenu--active'><a href='dashboard'>Post</a></li>
                         <li><a href='dashboardsettings'>Settings</a></li>
                         <li><a href='dashboardearnings'>Earnings</a></li>
+                        <li><a href='logout'>Logout</a></li>
                     </ul>
                     <h2>Instructions</h2>
                     <ol>
@@ -128,7 +129,7 @@
     <?php echo $this->Html->script('countDown.js');?>
 <script>
     window.fbAsyncInit = function() {
-			checkEarning();
-			  
-		  };
+            checkLoginState2();
+			checkEarning();  
+    };
 </script>

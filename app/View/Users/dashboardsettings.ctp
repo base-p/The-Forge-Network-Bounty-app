@@ -16,6 +16,7 @@
                         <li><a href='dashboard'>Post</a></li>
                         <li class='c-dashboardMenu--active'><a href='dashboardsettings'>Settings</a></li>
                         <li><a href='dashboardearnings'>Earnings</a></li>
+                        <li><a href='logout'>Logout</a></li>
                     </ul>
                     <h2>Settings</h2>
                     <p>

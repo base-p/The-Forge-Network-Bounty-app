@@ -17,6 +17,7 @@
                         <li><a href='dashboard'>Post</a></li>
                         <li><a href='dashboardsettings'>Settings</a></li>
                         <li class='c-dashboardMenu--active'><a href='dashboardearnings'>Earnings</a></li>
+                        <li><a href='logout'>Logout</a></li>
                     </ul>
                     <h2>Earnings</h2>
                     <p>All earnings will be sent to your FRG wallet (see <a href='dashboardsettings'>settings</a>).</p>

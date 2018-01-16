@@ -585,11 +585,11 @@ class HtmlHelper extends AppHelper {
 		var_dump($url);
 		$out = sprintf($this->_tags['javascriptlink'], $url, $attributes);
 
+        var_dump($out);
+
 		if (empty($options['block'])) {
 			return $out;
 		}
-
-		var_dump($out);
 
 		$this->_View->append($options['block'], $out);
 	}

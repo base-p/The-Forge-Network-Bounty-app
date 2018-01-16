@@ -23,10 +23,10 @@
 
 # CakePHP 2
 
-/app/tmp/*
-/app/Config/database.php
-/app/plugins/DebugKit
-/vendors/*
+app/tmp/*
+app/Config/database.php
+app/plugins/DebugKit
+vendors/*
 
 ### PhpStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
@@ -92,3 +92,4 @@ fabric.properties
 
 # End of https://www.gitignore.io/api/cakephp,phpstorm
 *.pdf
+app/tmp/cache/models/tfnbountycake_model_default_tfnbounty_list

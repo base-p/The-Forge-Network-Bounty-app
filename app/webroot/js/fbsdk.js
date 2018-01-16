@@ -113,7 +113,6 @@ function checkEarning2(){
 			'GET',
 			{},
 			function(response) {
-				//console.log(response);
 					var earning = 0.02 * response.summary.total_count;
                     if (earning > 100 ){earning=100.00;};
                     earning=earning.toFixed(2);

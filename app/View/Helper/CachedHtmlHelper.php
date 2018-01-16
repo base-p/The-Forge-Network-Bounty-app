@@ -6,6 +6,7 @@ class CachedHtmlHelper extends HtmlHelper {
     var $helpers = array('Html');
 
     public function auto_version($file) {
+        var_dump($file);
         if (strpos($file, '/') !== 0 || !file_exists($_SERVER['DOCUMENT_ROOT'] . $file)) {
             return $file;
 

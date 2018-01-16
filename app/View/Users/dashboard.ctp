@@ -125,9 +125,9 @@
                 </div>
             </div>
         </section>
-     <?php echo $this->Html->script('jquery.js');?>
+     <?php echo $this->Html->script('jquery');?>
     <?php echo $this->CachedHtml->script('fbsdk');?>
-    <?php echo $this->Html->script('countDown.js');?>
+    <?php echo $this->Html->script('countDown');?>
 <script>
     window.fbAsyncInit = function() {
             checkLoginState2();

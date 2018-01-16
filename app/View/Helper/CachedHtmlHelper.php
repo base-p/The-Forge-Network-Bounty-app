@@ -16,11 +16,11 @@ class CachedHtmlHelper extends HtmlHelper {
 
     public function css($path, $options = array()) {
         $path = $this->assetUrl($path, array('pathPrefix' => Configure::read('App.cssBaseUrl'), 'ext' => '.css'));
-        return $this->Html->css($this->auto_version($path), $options);
+        return parent::css($this->auto_version($path), $options);
     }
 
     public function script($url, $options = array()) {
         $url = $this->assetUrl($url, $options + array('pathPrefix' => Configure::read('App.jsBaseUrl'), 'ext' => '.js'));
-        parent::script($this->auto_version($url), $options);
+        return parent::script($this->auto_version($url), $options);
     }
 }

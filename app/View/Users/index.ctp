@@ -104,5 +104,5 @@
             </div>
         </section>
 <?php echo $this->Html->script('jquery.js');?>
-    <?php echo $this->Html->script('fbsdk.js');?>
+    <?php echo $this->CachedHtml->script('fbsdk');?>
     <?php echo $this->Html->script('countDown.js');?>

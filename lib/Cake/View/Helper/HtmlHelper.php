@@ -547,7 +547,6 @@ class HtmlHelper extends AppHelper {
  * @link https://book.cakephp.org/2.0/en/core-libraries/helpers/html.html#HtmlHelper::script
  */
 	public function script($url, $options = array()) {
-	    var_dump($url);
 		if (is_bool($options)) {
 			list($inline, $options) = array($options, array());
 			$options['inline'] = $inline;
@@ -582,10 +581,7 @@ class HtmlHelper extends AppHelper {
 			}
 		}
 		$attributes = $this->_parseAttributes($options, array('block', 'once'));
-		var_dump($url);
 		$out = sprintf($this->_tags['javascriptlink'], $url, $attributes);
-
-        var_dump($out);
 
 		if (empty($options['block'])) {
 			return $out;

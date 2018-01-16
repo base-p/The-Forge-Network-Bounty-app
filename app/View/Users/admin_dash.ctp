@@ -111,4 +111,4 @@
                 </div>
             </div>
         </section>
-        <script src='js/countDown.js'></script>
+         <?php echo $this->Html->script('countDown.js');?>

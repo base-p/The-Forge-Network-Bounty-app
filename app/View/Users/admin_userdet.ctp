@@ -18,6 +18,7 @@
                     </ul>
                     <p><a href='../dash'>← Back to overview</a></p>
                     <h2><?php echo $user['User']['name']; ?>'s activity</h2>
+                    <?php if(!empty($shares)){ ?>
                     <table>
                         <thead>
                             <tr>
@@ -36,6 +37,9 @@
                             <?php } ?>
                         </tbody>
                     </table>
+                    <?php }else{?>
+                    <p>No activity recorded yet.</p>
+                    <?php } ?>
                 </div>
                 <?php echo $this->Html->image('launch.png',['alt'=>'']); ?>
             </div>

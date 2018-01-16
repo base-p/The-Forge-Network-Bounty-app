@@ -1,0 +1,112 @@
+/**
+ * Row defaults
+ */
+
+.l-row {
+    padding: 4em 2em;
+    width: 100%;
+}
+
+.l-row--noPadding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+@media (min-width: 850px) {
+    .l-row {
+        padding: 4em;
+    }
+}
+
+.l-row__inner {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.l-row--fullwidth .l-row__inner {
+    max-width: none;
+}
+
+/**
+ * Menu row
+ */
+
+.l-row--menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    height: 50px;
+    padding: 0;
+    background-color: #1f0202;
+    z-index: 10000;
+    overflow: visible;
+}
+
+.l-row--menu .l-row__inner {
+    padding: 0 2em;
+}
+
+/**
+ * Masthead row
+ */
+
+.l-row--mastHead {
+    padding: 0;
+}
+
+/**
+ * Dashboard row
+ */
+
+.l-row--dashboard {
+    padding-bottom: 0;
+    color: #fff;
+    background: radial-gradient(90% 100%,#ff0006 0,#5b1215 100%);
+}
+
+.l-row--dashboard a {
+    color: #1f0202;
+}
+
+.l-row--dashboard code {
+    padding: .25em .5em;
+    background: rgba(0, 0, 0, .2);
+}
+
+.l-row--dashboard h2 {
+    padding-top: 1.5em;
+    border-top: 1px dotted #fff;
+}
+
+.l-row--dashboard h2:first-of-type {
+    padding-top: 0;
+    border: 0;
+}
+
+/**
+ * Footer row
+ */
+
+.l-row--footer {
+    background-color: #1f0202;
+    color: #fff;
+    text-align: center;
+}
+
+.l-row--footer__first,
+.l-row--footer__second,
+.l-row--footer__third {
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+.l-row--footer__third {
+    margin-bottom: 0;
+    opacity: .4;
+}
+#estimate{
+    cursor: pointer;
+}

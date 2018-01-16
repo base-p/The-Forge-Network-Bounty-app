@@ -586,6 +586,7 @@ class HtmlHelper extends AppHelper {
 		if (empty($options['block'])) {
 			return $out;
 		}
+
 		$this->_View->append($options['block'], $out);
 	}
 

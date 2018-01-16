@@ -103,6 +103,6 @@
                 </div>
             </div>
         </section>
-<?php echo $this->Html->script('jquery.js');?>
-    <?php echo $this->Html->script('fbsdk.js');?>
-    <?php echo $this->Html->script('countDown.js');?>
+<?php echo $this->CachedHtml->script('jquery');?>
+    <?php echo $this->CachedHtml->script('fbsdk');?>
+    <?php echo $this->CachedHtml->script('countDown');?>

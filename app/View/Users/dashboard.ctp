@@ -139,6 +139,5 @@
               });
 
             checkLoginState2();
-			checkEarning();  
     };
 </script>

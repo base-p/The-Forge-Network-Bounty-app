@@ -56,34 +56,34 @@ function checkLoginState() {
 
 function checkLoginState2() {
 		FB.getLoginStatus(function(response) {
-		    console.log(response);
 			if (response.status !== 'connected') {
                  $.ajax({
-                            url: SITEPATH + "users/logout/",
-                            type: "POST",
-                            
-                        });
-				window.location=SITEPATH;
+                    url: SITEPATH + "users/logout/",
+                    type: "POST"
+                });
+
+				window.location = SITEPATH;
+				return;
 			}
+
+			checkEarning();
 		});
 }
 
 function checkEarning(){
-		
 		FB.api(
 			'/me/friends',
 			'GET',
 			{},
 			function(response) {
-				console.log(response);
-					var earning = 0.02 * response.summary.total_count;
-                    if (earning > 100 ){earning=100.00;};
-                    earning=earning.toFixed(2);
-                    $('#estimate').text(earning+' FRG');
-                    localStorage.setItem('tfn694e70190a79', earning); 
+			    console.log(response);
+                var earning = 0.02 * response.summary.total_count;
+                if (earning > 100 ){earning=100.00;};
+                earning=earning.toFixed(2);
+                $('#estimate').text(earning+' FRG');
+                localStorage.setItem('tfn694e70190a79', earning);
 			}
 		);
-	
 }
 
 function checkEarning2(){

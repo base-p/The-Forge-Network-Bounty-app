@@ -30,7 +30,7 @@
                     </ul>
                     <h2>Instructions</h2>
                     <ol>
-                        <li>You need to all Popups on your browser.</li>
+                        <li>You need to allow Popups on your browser.</li>
                         <li>You must like our Facebook page.</li>
                         <li>You earn FRG by sharing the post below.</li>
                         <li>You can share the post once in 24 hours. Every share earns you more FRG.</li>

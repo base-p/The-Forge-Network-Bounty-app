@@ -21,6 +21,7 @@
                     </ul>
                     <h2>Earnings</h2>
                     <p>All earnings will be sent to your FRG wallet (see <a href='dashboardsettings'>settings</a>).</p>
+                     <?php if(!empty($shares)){ ?>
                     <table>
                         <caption>You've earned <code><?php echo $earned;?> FRG</code> in total.</caption>
                         <thead>
@@ -40,6 +41,9 @@
                             <?php } ?>
                         </tbody>
                     </table>
+                    <?php }else{?>
+                    <p>No activity recorded yet.</p>
+                    <?php } ?>
                 </div>
                 <?php echo $this->Html->image('launch.png',['alt'=>'']); ?>
             </div>

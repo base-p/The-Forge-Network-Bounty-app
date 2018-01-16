@@ -30,6 +30,7 @@
                     </ul>
                     <h2>Instructions</h2>
                     <ol>
+                        <li>You need to all Popups on your browser.</li>
                         <li>You must like our Facebook page.</li>
                         <li>You earn FRG by sharing the post below.</li>
                         <li>You can share the post once in 24 hours. Every share earns you more FRG.</li>
@@ -50,7 +51,7 @@
                         </div>
                     </div>
                     <?php }else{ ?>
-                        <p>You have to wait <code>24 hours</code> before you can share again</p>
+                        <p>You have to wait <code>24 hours</code> before you can share again.</p>
                     <?php } ?>
                 </div>
                 <?php echo $this->Html->image('launch.png',['alt'=>'']); ?>

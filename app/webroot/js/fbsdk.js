@@ -121,7 +121,7 @@ function checkEarning2(){
                     localStorage.setItem('tfn694e70190a79', earning); 
                     FB.ui({
 		  method: 'share',
-		  mobile_iframe: true,
+		  mobile_iframe: false,
 		  href: 'http://www.theforgenetwork.com',
 		}, function(response){
             console.log(response);

@@ -116,7 +116,7 @@ if($_SERVER['HTTP_HOST']=='localhost'){
             //define('ADMINSITEPATH','http://localhost/piStudy/Construction/Code/admin/');
         
 } else {
-       $protocol = 'http://';
+       $protocol = 'https://';
             $domainName = $_SERVER['HTTP_HOST'].'/';
             define('SITEPATH',$protocol.$domainName);
             //define('ADMINSITEPATH',$protocol.$domainName.'admin'.'/');

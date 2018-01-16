@@ -13,7 +13,7 @@
                 <div class='c-dashboardContent'>
                     <h1 class='c-sectionTitle'>Admin Login</h1>
                     
-                    <h2>Access Admin rea</h2>
+                    <h2>Access Admin Area</h2>
                     
                      <?php echo $this->Form->create('User', array('class' => 'c-form')); ?>
                     <?php echo $this->Session->flash(); ?>

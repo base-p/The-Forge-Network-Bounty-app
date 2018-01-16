@@ -6,7 +6,7 @@
         <title>ForgeNet Bounty Program</title>
         <meta name='description' content=''>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel='shortcut icon' type='image/png' href='/img/favicon.png'/>
+        <link rel='icon' type='image/png' href='/img/favicon.png' />
         <?php echo $this->Html->css('normalize.css'); ?>
         <?php echo $this->Html->css('main.css'); ?>
         <?php echo $this->Html->css('layout.css'); ?>

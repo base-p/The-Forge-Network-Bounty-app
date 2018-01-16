@@ -137,7 +137,7 @@
                 xfbml: true,
                 version: 'v2.9'
               });
-              
+
             checkLoginState2();
 			checkEarning();  
     };

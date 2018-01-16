@@ -14,7 +14,7 @@ class CachedHtmlHelper extends HtmlHelper {
 
         }
         $mtime = filemtime($_SERVER['DOCUMENT_ROOT'] . $file);
-        return preg_replace('{\\.([^./]+)$}', ".\$1?t=$mtime:", $file);
+        return preg_replace('{\\.([^./]+)$}', ".\$1?t=$mtime", $file);
     }
 
     public function css($path, $options = array()) {

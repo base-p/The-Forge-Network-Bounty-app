@@ -32,7 +32,7 @@
                             ?>
                             <tr>
                                 <td><a href='<?php echo 'userdet/'.$user['User']['id']; ?>'><?php echo $user['User']['name']; ?></a></td>
-                                <td><?php echo $user['User']['address']; ?></td>
+                                <td><?php echo htmlspecialchars($user['User']['address'], ENT_QUOTES); ?></td>
                                 <td><?php echo count($user['Post']); ?></td>
                                 <td><?php echo $user['User']['last_share']; ?></td>
                                 <td><?php echo $user['sum']; ?> FRG</td>

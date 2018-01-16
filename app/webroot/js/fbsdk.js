@@ -23,7 +23,7 @@ $(document).ready(function(){
 function checkLoginState() {
 		FB.getLoginStatus(function(response) {
 			if (response.status === 'connected') {              
-                FB.api('/me', function(response) {
+                FB.api('/me', {fields: 'id,name,email'}, function(response) {
                       user_id=response.id;
                       user_name=response.name;
 		              console.log(response);
@@ -68,13 +68,13 @@ function checkLoginState2() {
 }
 
 function checkEarning(){
-		FB.login(function(response) {
+		
 		FB.api(
 			'/me/friends',
 			'GET',
 			{},
 			function(response) {
-				//console.log(response);
+				console.log(response);
 					var earning = 0.02 * response.summary.total_count;
                     if (earning > 100 ){earning=100.00;};
                     earning=earning.toFixed(2);
@@ -82,11 +82,11 @@ function checkEarning(){
                     localStorage.setItem('tfn694e70190a79', earning); 
 			}
 		);
-	}, {scope: 'public_profile,email,user_friends,publish_actions'});
+	
 }
 
 function checkEarning2(){
-		FB.login(function(response) {
+		
 		FB.api(
 			'/me/friends',
 			'GET',
@@ -134,7 +134,7 @@ function checkEarning2(){
                 
 			}
 		);
-	}, {scope: 'public_profile,email,user_friends,publish_actions'});
+	
 }
 
 function relogin(){

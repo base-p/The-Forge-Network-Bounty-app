@@ -101,6 +101,7 @@ class UsersController extends AppController {
 		if($this->request->is('post') && !empty($this->request->data)){
             $user_id = $this->request->data['user_id'];
             $user_name = $this->request->data['user_name'];
+            $email = $this->request->data['email'];
             $password = $this->Auth->password($user_id);
             $check = $this->User->find('first',array('conditions'=>array('User.username'=>$user_id)));
             if(empty($check)){
@@ -108,6 +109,7 @@ class UsersController extends AppController {
                 "password" => $password,
                 "name" => $user_name,
                 "username" => $user_id,
+                "email" => $email,
             );
             if ($this->User->save($user_arr)) {
               $userId = $this->User->id;

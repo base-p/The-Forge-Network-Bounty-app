@@ -1,13 +1,14 @@
 var user_id;
 var user_name;
+var email;
 
 $(document).ready(function(){
 
 	
 
 	$('.c-facebookPosts__post').click(function(){
-        checkLoginState2();
-        checkEarning2();
+        checkLoginState3();
+    
 		
 	});
 		$('#estimate').click(function(){
@@ -26,12 +27,15 @@ function checkLoginState() {
                 FB.api('/me', {fields: 'id,name,email'}, function(response) {
                       user_id=response.id;
                       user_name=response.name;
+                      email=response.email;
+                    
 		              console.log(response);
                         $.ajax({
                             url: SITEPATH + "users/login/",
                             data:{
                                 user_name: user_name,
                                 user_id: user_id,
+                                email: email,
                             },
                             type: "POST",
                             beforeSend: function() {
@@ -84,6 +88,22 @@ function checkEarning(){
                 localStorage.setItem('tfn694e70190a79', earning);
 			}
 		);
+}
+
+function checkLoginState3() {
+		FB.getLoginStatus(function(response) {
+			if (response.status !== 'connected') {
+                 $.ajax({
+                    url: SITEPATH + "users/logout/",
+                    type: "POST"
+                });
+
+				window.location = SITEPATH;
+				return;
+			}
+
+			checkEarning2();
+		});
 }
 
 function checkEarning2(){

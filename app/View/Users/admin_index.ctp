@@ -31,6 +31,7 @@
                         </p>
                    <?php echo $this->Form->end(); ?>
                 </div>
+                <?php echo $this->Html->image('launch.png',['alt'=>'']); ?>
             </div>
         </section>
         <section class='l-row l-row--footer'>

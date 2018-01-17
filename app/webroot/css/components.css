@@ -323,3 +323,7 @@
 .fb_reset > div {
     overflow: visible !important;
 }
+
+div#fb_dialog_ipad_overlay {
+    top: 0 !important;
+}

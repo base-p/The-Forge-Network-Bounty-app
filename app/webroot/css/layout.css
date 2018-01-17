@@ -64,6 +64,7 @@
 .l-row--dashboard {
     padding-bottom: 0;
     color: #fff;
+    overflow: hidden;
     background: radial-gradient(90% 100%,#ff0006 0,#5b1215 100%);
 }
 

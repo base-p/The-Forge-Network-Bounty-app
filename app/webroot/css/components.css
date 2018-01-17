@@ -315,3 +315,11 @@
     background: #fff;
     color: green;
 }
+
+/**
+ * Facebook share
+ */
+
+.fb_reset > div {
+    overflow: visible !important;
+}

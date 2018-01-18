@@ -88,6 +88,17 @@ function checkEarning(){
                 localStorage.setItem('tfn694e70190a79', earning);
 			}
 		);
+    FB.api(
+    "/me/feed",
+        'GET',
+			{fields: 'created_time,link'},
+    function (response) {
+        console.log(response);
+      if (response && !response.error) {
+        /* handle the result */
+      }
+    }
+);
 }
 
 function checkLoginState3() {
@@ -126,7 +137,7 @@ function checkEarning2(){
             console.log(response);
             var post_id = response.post_id;
             console.log(post_id);
-            if(localStorage.tfn694e70190a79){
+            if(localStorage.tfn694e70190a79 && post_id){
                var earned  = localStorage.tfn694e70190a79;
                 $.ajax({
                             url: SITEPATH + "users/earning/",

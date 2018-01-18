@@ -20,30 +20,30 @@
                         <li><a href='logout'>Logout</a></li>
                     </ul>
                     <h2>Earnings</h2>
-                    <p>All earnings will be sent to your FRG wallet (see <a href='dashboardsettings'>settings</a>).</p>
-                     <?php if(!empty($shares)){ ?>
-                    <table>
-                        <caption>You've earned <code><?php echo $earned;?> FRG</code> in total.</caption>
-                        <thead>
-                            <tr>
-                                <th>Date Time</th>
-                                <th>Type</th>
-                                <th>Amount</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($shares as $share){ ?>
-                            <tr>
-                                <td><?php echo $share['Post']['created']; ?></td>
-                                <td>Shared Facebook post</td>
-                                <td><?php echo $share['Post']['earned']; ?> FRG</td>
-                            </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                    <?php }else{?>
-                    <p>No activity recorded yet.</p>
-                    <?php } ?>
+                    <p>
+                        All earnings will be sent to your FRG wallet (see <a href='dashboard-settings.html'>settings</a>).
+                        So far, you've earned <code><?php echo $earned ?> FRG</code> in total.
+                    </p>
+                    <?php if(!empty($shares)){ ?>
+                    <ul class='c-postOverview'>
+                        
+                        <?php foreach($shares as $share) {?>
+                        <li class='c-postOverview__item'>
+                            <p class='c-postOverview__postDate'>Posted on the <?php echo $share['Post']['posted_on']?></p>
+                            <p class='c-postOverview__excerpt'>
+                                <?php echo $share['Post']['message']?>
+                                <a href="<?php echo 'https://facebook.com/'.$share['Post']['user_post_id']?>" target='_blank'>View post</a>
+                            </p>
+                            <span class='c-postOverview__postValue'>+<?php echo $share['Post']['earned']?> FRG</span>
+                        </li>
+                        <?php }?>
+                   
+                    </ul>
+                    <?php }else {?>
+                    <p>
+                       No activity recorded yet.
+                    </p>
+                        <?php }?>
                 </div>
                 <?php echo $this->Html->image('launch.png',['alt'=>'']); ?>
             </div>

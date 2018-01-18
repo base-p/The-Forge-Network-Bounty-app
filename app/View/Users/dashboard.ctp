@@ -30,12 +30,12 @@
                     </ul>
                     <h2>Instructions</h2>
                     <ol>
-                        <li>You need to allow Popups on your browser.</li>
+                        <li>You must follows us on Twitter and Join our Telegram Channel.</li>
                         <li>You must like our Facebook page.</li>
                         <li>You earn FRG by sharing the post below.</li>
                         <li>You can share the post once in 24 hours. Every share earns you more FRG.</li>
                         <li>All shares will be registered by us (see <a href='dashboardearnings'>earnings</a>) and paid out to your FRG wallet (see <a href='dashboardsettings'>settings</a>).</li>
-                        <li>Make sure to personalize the text you share the post with. Make it interesting.</li>
+                        <li>Make sure to personalize the text you share the post with. Make it interesting. Atleast 200 characters!</li>
                         <li>Sit back, and watch your earned FRG flow to your wallet.</li>
                     </ol>
                     <h2>Like our Facebook page</h2>

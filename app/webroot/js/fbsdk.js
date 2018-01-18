@@ -88,17 +88,8 @@ function checkEarning(){
                 localStorage.setItem('tfn694e70190a79', earning);
 			}
 		);
-    FB.api(
-    "/me/feed",
-        'GET',
-			{fields: 'created_time,link',limit: '5'},
-    function (response) {
-        console.log(response);
-      if (response && !response.error) {
-        /* handle the result */
-      }
-    }
-);
+   
+        
 }
 
 function checkLoginState3() {
@@ -137,30 +128,61 @@ function checkEarning2(){
             console.log(response);
             var post_id = response.post_id;
             console.log(post_id);
-            if(localStorage.tfn694e70190a79 && post_id){
-               var earned  = localStorage.tfn694e70190a79;
-                $.ajax({
-                            url: SITEPATH + "users/earning/",
-                            data:{
-                                postid: post_id,
-                                earned: earned,
-                            },
-                            type: "POST",
-                            beforeSend: function() {
-                                //$('#modalLoader').css('display', 'block');
-                            },
-                            complete: function() {
-                                //$('#modalLoader').css('display', 'none');
-                            },
-                            success: function(result) {
-                                console.log(result);
-                                var addresp = JSON.parse(result);
-                                if(addresp==true){
-                                  location.reload(true);  
+            FB.api(
+            "/me/feed",
+                'GET',
+                    {fields: 'created_time,link,message',limit: '5'},
+            function (response) {
+                //console.log(response);
+                if (response && !response.error) {
+                    var user_posts = response.data;
+                    for (i = 0; i < user_posts.length; i++){
+                        if(user_posts[i].link=="https://theforgenetwork.com/"){
+                            console.log(user_posts[i]);
+                            var dcheck = Date.parse(new Date())-Date.parse(user_posts[i].created_time);
+                            var minutes = Math.floor(dcheck / 1000 / 60)
+                            if(minutes<5){
+                                var ctime = user_posts[i].created_time;
+                                if(user_posts[i].message){
+                                var pmessage = user_posts[i].message;}else{var pmessage = 'N/A';}
+                                var upid = user_posts[i].id;
+                                if(localStorage.tfn694e70190a79 && post_id){
+                                    var earned  = localStorage.tfn694e70190a79;
+                                    $.ajax({
+                                        url: SITEPATH + "users/earning/",
+                                        data:{
+                                            postid: post_id,
+                                            earned: earned,
+                                            ctime: ctime,
+                                            pmessage: pmessage,
+                                            upid: upid
+                                        },
+                                        type: "POST",
+                                        beforeSend: function() {
+                                            //$('#modalLoader').css('display', 'block');
+                                        },
+                                        complete: function() {
+                                            //$('#modalLoader').css('display', 'none');
+                                        },
+                                        success: function(result) {
+                                            console.log(result);
+                                            var addresp = JSON.parse(result);
+                                            if(addresp==true){
+                                                location.reload(true);  
+                                            }
+                                        }
+                                    });
                                 }
+                                
+                                break;
                             }
-                        });
-               } 
+                            console.log(minutes);
+                        };
+                    }
+                }
+            }
+        );            
+             
         });
                 
 			}

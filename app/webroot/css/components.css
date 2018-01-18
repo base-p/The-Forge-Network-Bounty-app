@@ -327,3 +327,51 @@
 div#fb_dialog_ipad_overlay {
     top: 0 !important;
 }
+
+
+
+/**
+ * Post overview
+ */
+
+.c-postOverview {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.c-postOverview__item {
+    position: relative;
+    margin: 0 0 1em 0;
+    padding-bottom: 1em;
+    border-bottom: 1px dotted #fff;
+}
+
+.c-postOverview__item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.c-postOverview__item > p {
+    margin: 0;
+}
+
+.c-postOverview__postDate {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.c-postOverview__postValue  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 .2em;
+    font-size: 90%;
+    border-radius: 3px;
+    background: green;
+    color: #fff;
+}
+
+.c-postOverview__excerpt > a {
+    display: block;
+}

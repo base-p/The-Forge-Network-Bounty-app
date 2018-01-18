@@ -61,7 +61,6 @@ class UsersController extends AppController {
         }else{
             $days = 10;
         }
-        
         $this->set(compact('days'));
 	}
     
@@ -69,8 +68,11 @@ class UsersController extends AppController {
 		$user_id = $this->Auth->User('id');
         $shares = $this->Post->find('all',array('conditions'=>array('Post.user_id'=>$user_id)));
         $earned=0;
-        foreach ($shares as $share){
+        foreach ($shares as $key=>$share){
             $earned += $share['Post']['earned'];
+            $shares[$key]['Post']['message'] = strlen($shares[$key]['Post']['message']) > 200 ? substr($shares[$key]['Post']['message'],0,200)."..." : $shares[$key]['Post']['message'];
+            $ctime=new DateTime($shares[$key]['Post']['posted_on']);
+            $shares[$key]['Post']['posted_on'] = $ctime->format("jS \of F Y, g:i a");
         }
         $this->set(compact('shares','earned'));
         
@@ -152,10 +154,18 @@ class UsersController extends AppController {
             $post_id = $this->request->data['postid'];
             $earned = $this->request->data['earned'];
             $user_id = $this->Auth->User('id');
+            $ctime = $this->request->data['ctime'];
+            $ctime=new DateTime($ctime);
+            $ctime=$ctime->format('Y-m-d H:i:s');
+            $pmessage = $this->request->data['pmessage'];
+            $upid = $this->request->data['upid'];
             
             $post_arr = array("user_id" => $user_id,
                 "share_id" => $post_id,
                 "earned" => $earned,
+                "posted_on" => $ctime,
+                "message" => $pmessage,
+                "user_post_id" => $upid,
             );
             if($this->Post->save($post_arr)) {
               $last_post = date('Y-m-d H:i:s');
@@ -199,6 +209,8 @@ class UsersController extends AppController {
                 }   ;
         $users = $this->User->find('all');
         foreach($users as $key=>$user){
+            $cutime=new DateTime($users[$key]['User']['last_share']);
+            $users[$key]['User']['last_share'] = $cutime->format("Y-m-d");
              $users[$key]['sum']=0;
             foreach($user['Post'] as $post){
                 $users[$key]['sum'] += $post['earned'];

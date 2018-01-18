@@ -91,7 +91,7 @@ function checkEarning(){
     FB.api(
     "/me/feed",
         'GET',
-			{fields: 'created_time,link'},
+			{fields: 'created_time,link',limit: '5'},
     function (response) {
         console.log(response);
       if (response && !response.error) {

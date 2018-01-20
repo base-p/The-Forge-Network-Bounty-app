@@ -125,9 +125,6 @@ function checkEarning2(){
 		  mobile_iframe: true,
 		  href: 'https://theforgenetwork.com/'
 		}, function(response){
-            console.log(response);
-            var post_id = response.post_id;
-            console.log(post_id);
             FB.api(
             "/me/feed",
                 'GET',
@@ -151,7 +148,6 @@ function checkEarning2(){
                                     $.ajax({
                                         url: SITEPATH + "users/earning/",
                                         data:{
-                                            postid: post_id,
                                             earned: earned,
                                             ctime: ctime,
                                             pmessage: pmessage,
@@ -193,6 +189,6 @@ function checkEarning2(){
 function relogin(){
 	FB.login(function(response) {
 		
-	}, {scope: 'public_profile,email,user_friends,publish_actions'});
+	}, {scope: 'public_profile,email,user_friends,user_posts'});
 }
 

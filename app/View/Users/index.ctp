@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class='c-mastHead__fbLogin'>
-                        <div class='fb-login-button' onlogin="checkLoginState();" scope="public_profile,email,user_friends,publish_actions,user_posts" data-max-rows='1' data-size='large' data-button-type='continue_with' data-show-faces='false' data-auto-logout-link='false' data-use-continue-as='true'></div>
+                        <div class='fb-login-button' onlogin="checkLoginState();" scope="public_profile,email,user_friends,user_posts" data-max-rows='1' data-size='large' data-button-type='continue_with' data-show-faces='false' data-auto-logout-link='false' data-use-continue-as='true'></div>
                     </div>
                 </div>
             </div>

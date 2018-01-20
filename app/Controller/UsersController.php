@@ -151,7 +151,6 @@ class UsersController extends AppController {
          $this->autoRender = false;
         if($this->request->referer()==SITEPATH.'users/dashboard'){
 		if($this->request->is('post') && !empty($this->request->data)){
-            $post_id = $this->request->data['postid'];
             $earned = $this->request->data['earned'];
             $user_id = $this->Auth->User('id');
             $ctime = $this->request->data['ctime'];
@@ -161,7 +160,6 @@ class UsersController extends AppController {
             $upid = $this->request->data['upid'];
             
             $post_arr = array("user_id" => $user_id,
-                "share_id" => $post_id,
                 "earned" => $earned,
                 "posted_on" => $ctime,
                 "message" => $pmessage,

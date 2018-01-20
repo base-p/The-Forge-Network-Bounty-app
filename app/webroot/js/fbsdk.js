@@ -121,8 +121,9 @@ function checkEarning2(){
                     $('#estimate').text(earning+' FRG');
                     localStorage.setItem('tfn694e70190a79', earning); 
                     FB.ui({
-		  method: 'feed',
+		  method: 'share',
 		  mobile_iframe: true,
+        display: 'popup',
 		  href: 'https://theforgenetwork.com/'
 		}, function(response){
             FB.api(

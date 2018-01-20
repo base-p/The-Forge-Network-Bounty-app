@@ -123,7 +123,6 @@ function checkEarning2(){
                     FB.ui({
 		  method: 'feed',
 		  mobile_iframe: true,
-        display: 'popup',
 		  link: 'https://theforgenetwork.com/'
 		}, function(response){
             FB.api(

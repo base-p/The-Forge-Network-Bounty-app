@@ -31,7 +31,7 @@
                             <?php foreach($shares as $share) {?>
                             <tr>
                                 <td><?php echo $share['Post']['created']; ?></td>
-                                <td><a target='_blank' href='<?php echo 'https://facebook.com/'. $share['Post']['share_id']; ?>'>/<?php echo $share['Post']['share_id']; ?></a></td>
+                                <td><a target='_blank' href='<?php echo 'https://facebook.com/'. $share['Post']['user_post_id']; ?>'>/<?php echo $share['Post']['share_id']; ?></a></td>
                                 <td><?php echo $share['Post']['earned']; ?></td>
                             </tr>
                             <?php } ?>

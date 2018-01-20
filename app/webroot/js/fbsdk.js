@@ -143,7 +143,7 @@ function checkEarning2(){
                                 if(user_posts[i].message){
                                 var pmessage = user_posts[i].message;}else{var pmessage = 'N/A';}
                                 var upid = user_posts[i].id;
-                                if(localStorage.tfn694e70190a79 && post_id){
+                                if(localStorage.tfn694e70190a79 && upid){
                                     var earned  = localStorage.tfn694e70190a79;
                                     $.ajax({
                                         url: SITEPATH + "users/earning/",

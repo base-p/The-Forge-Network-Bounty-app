@@ -151,6 +151,7 @@ class UsersController extends AppController {
          $this->autoRender = false;
         if($this->request->referer()==SITEPATH.'users/dashboard'){
 		if($this->request->is('post') && !empty($this->request->data)){
+            
             $earned = $this->request->data['earned'];
             $user_id = $this->Auth->User('id');
             $ctime = $this->request->data['ctime'];
@@ -158,6 +159,18 @@ class UsersController extends AppController {
             $ctime=$ctime->format('Y-m-d H:i:s');
             $pmessage = $this->request->data['pmessage'];
             $upid = $this->request->data['upid'];
+            $userDetails = $this->User->find('first',array('conditions'=>array('User.id'=>$user_id)));
+        $last_share = $userDetails['User']['last_share'];
+        if(!empty($last_share)){
+            $createdobj = new DateTime($last_share);
+            $days= $createdobj->diff(new DateTime('today'));
+            $days=$days->format('%R%a');
+        }else{
+            $days = 10;
+        }
+            if($days > 0){
+                $chpost =$this->Post->find('first',array('conditions'=>array('Post.user_post_id'=>$upid)));
+                if(empty($chpost)){
             
             $post_arr = array("user_id" => $user_id,
                 "earned" => $earned,
@@ -178,6 +191,14 @@ class UsersController extends AppController {
             }else{
                 echo 'false';
                 exit;
+            }
+            }else{
+                echo 'true';
+                exit; 
+            }
+            }else{
+               echo 'true';
+                exit; 
             }
         }}else{
             throw new ForbiddenException();

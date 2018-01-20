@@ -234,6 +234,7 @@ class UsersController extends AppController {
             foreach($user['Post'] as $post){
                 $users[$key]['sum'] += $post['earned'];
             }
+            $cutime = NULL;
         }
         $this->set(compact('users'));
         

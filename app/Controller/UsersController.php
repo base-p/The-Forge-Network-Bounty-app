@@ -228,13 +228,15 @@ class UsersController extends AppController {
                 }   ;
         $users = $this->User->find('all');
         foreach($users as $key=>$user){
+            if(!empty($users[$key]['User']['last_share'])){
             $cutime=new DateTime($users[$key]['User']['last_share']);
             $users[$key]['User']['last_share'] = $cutime->format("Y-m-d");
+            $cutime = NULL;
+            }
              $users[$key]['sum']=0;
             foreach($user['Post'] as $post){
                 $users[$key]['sum'] += $post['earned'];
             }
-            $cutime = NULL;
         }
         $this->set(compact('users'));
         

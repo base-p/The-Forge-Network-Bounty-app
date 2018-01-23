@@ -24,7 +24,6 @@
 # CakePHP 2
 
 app/tmp/*
-app/Config/database.php
 app/plugins/DebugKit
 vendors/*
 

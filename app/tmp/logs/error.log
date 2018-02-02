@@ -2686,3 +2686,499 @@ Stack Trace:
 #4 C:\xampp\htdocs\tfnbounty\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
 #5 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2018-01-21 16:09:03 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-21 22:16:20 Error: [MissingActionException] Action UsersController::checkEmail() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'checkEmail',
+)
+Request URL: /tfnbounty/users/checkEmail
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\tfnbounty\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-01-21 22:16:20 Error: [MissingActionException] Action UsersController::checkEmail() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'checkEmail',
+)
+Request URL: /tfnbounty/users/checkEmail
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\tfnbounty\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-01-21 22:16:21 Error: [MissingActionException] Action UsersController::checkEmail() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'checkEmail',
+)
+Request URL: /tfnbounty/users/checkEmail
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\tfnbounty\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-01-21 22:16:21 Error: [MissingActionException] Action UsersController::checkEmail() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'checkEmail',
+)
+Request URL: /tfnbounty/users/checkEmail
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\tfnbounty\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-01-21 22:16:25 Error: [MissingActionException] Action UsersController::checkEmail() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'checkEmail',
+)
+Request URL: /tfnbounty/users/checkEmail
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\tfnbounty\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-01-27 00:58:11 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendMail2
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 00:58:11 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendMail2
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:00:13 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendMail2
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:00:13 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:00:15 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendMail2
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:00:15 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:00:16 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendMail2
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:00:17 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:00:29 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendMail2
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:00:29 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:01:05 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendjj
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:01:05 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:01:19 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendjj
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:01:19 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:01:21 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/fonts/Fjalla-One-regular.woff
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:01:34 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendMail2
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:01:34 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:01:58 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendjj
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:01:58 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:04:15 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendjj
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:04:15 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:04:19 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:05:23 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendjj
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:05:23 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:06:31 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendjj
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:06:31 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:06:53 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/sendjj
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-01-27 01:06:53 Error: [MissingControllerException] Controller class TfnstoreController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnstoreController',
+  'plugin' => NULL,
+)
+Request URL: /tfnstore/users/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:39 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/css/normalize.css
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:39 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:39 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/css/layout.css
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:39 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/js/fbsdk.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:40 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/js/jquery.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:40 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/css/components.css
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:40 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/css/main.css
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:40 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/js/jquery.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:41 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/js/fbsdk.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:41 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:55 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/css/normalize.css
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:55 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/css/layout.css
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:55 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/css/main.css
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:55 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:55 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/js/jquery.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:55 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/js/fbsdk.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:55 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/css/components.css
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:55 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/js/jquery.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:55 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/js/fbsdk.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-02-02 05:07:55 Error: [MissingControllerException] Controller class TfnbountyController could not be found.
+Exception Attributes: array (
+  'class' => 'TfnbountyController',
+  'plugin' => NULL,
+)
+Request URL: /tfnbounty/tfnbounty/js/countDown.js
+Stack Trace:
+#0 C:\xampp\htdocs\tfnbounty\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

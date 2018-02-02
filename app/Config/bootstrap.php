@@ -122,4 +122,6 @@ if($_SERVER['HTTP_HOST']=='localhost'){
             //define('ADMINSITEPATH',$protocol.$domainName.'admin'.'/');
 }
 
+define('F_AID','307005293152978');
+define('F_SEC','6bc3ae7781428b2a0bebe0f7cb4338d0');
 

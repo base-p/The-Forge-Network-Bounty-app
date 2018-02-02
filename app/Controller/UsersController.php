@@ -46,6 +46,18 @@ class UsersController extends AppController {
  *   or MissingViewException in debug mode.
  */
 	public function index() {
+        require APP . 'Vendor' . DS. 'autoload.php';
+        $fb = new Facebook\Facebook([
+          'app_id' => F_AID,
+          'app_secret' => F_SEC,
+          'default_graph_version' => 'v2.10',
+          ]);
+
+        $helper = $fb->getRedirectLoginHelper();
+
+        $permissions = ['email','public_profile','user_friends','user_posts']; // Optional permissions
+        $loginUrl = $helper->getLoginUrl(SITEPATH.'login', $permissions);
+        $this->set(compact('loginUrl'));
 		
 	}
     

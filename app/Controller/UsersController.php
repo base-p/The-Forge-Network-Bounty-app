@@ -51,6 +51,7 @@ class UsersController extends AppController {
           'app_id' => F_AID,
           'app_secret' => F_SEC,
           'default_graph_version' => 'v2.10',
+            'persistent_data_handler'=>'session'
           ]);
 
         $helper = $fb->getRedirectLoginHelper();
@@ -64,7 +65,25 @@ class UsersController extends AppController {
     
     public function dashboard() {
 		$user_id = $this->Auth->User('id');
-        
+        $accessToken = $this->Auth->User('accessToken');
+        require APP . 'Vendor' . DS. 'autoload.php';
+        $fb = new Facebook\Facebook([
+          'app_id' => F_AID,
+          'app_secret' => F_SEC,
+          'default_graph_version' => 'v2.10',
+            'persistent_data_handler'=>'session'
+          ]);
+        try {
+  // Returns a `Facebook\FacebookResponse` object
+              $response = $fb->get('/me/friends', $accessToken);
+            } catch(Facebook\Exceptions\FacebookResponseException $e) {
+              echo 'Graph returned an error: ' . $e->getMessage();
+              exit;
+            } catch(Facebook\Exceptions\FacebookSDKException $e) {
+              echo 'Facebook SDK returned an error: ' . $e->getMessage();
+              exit;
+            }
+        $jehe = $response->getGraphNode();
         $userDetails = $this->User->find('first',array('conditions'=>array('User.id'=>$user_id)));
         $last_share = $userDetails['User']['last_share'];
         if(!empty($last_share)){
@@ -124,6 +143,7 @@ class UsersController extends AppController {
           'app_id' => F_AID,
           'app_secret' => F_SEC,
           'default_graph_version' => 'v2.10',
+            'persistent_data_handler'=>'session'
           ]);
 
         $helper = $fb->getRedirectLoginHelper();

@@ -86,8 +86,9 @@ class UsersController extends AppController {
               echo 'Facebook SDK returned an error: ' . $e->getMessage();
               exit;
             }
-        $jehe = $response->getGraphEdge();
-        $jehe = $jehe->getTotalCount();
+        $friendsEdge = $response->getGraphEdge();
+        $fcount = $friendsEdge->getTotalCount();
+        $fcount = 0.01*$fcount;
         $userDetails = $this->User->find('first',array('conditions'=>array('User.id'=>$user_id)));
         $last_share = $userDetails['User']['last_share'];
         if(!empty($last_share)){
@@ -97,7 +98,7 @@ class UsersController extends AppController {
         }else{
             $days = 10;
         }
-        $this->set(compact('days','jehe'));
+        $this->set(compact('days','fcount'));
 	}
     
     public function dashboardearnings() {
@@ -133,11 +134,19 @@ class UsersController extends AppController {
         }
 	}
     
-    public function login2() {
+    public function retrieve() {
          $this->autoRender = false;
-        if($this->request->referer()==SITEPATH){
-		if($this->request->is('post') && !empty($this->request->data)){
-            }}
+        $user_id = $this->Auth->User('id');
+        $accessToken = $this->Auth->User('accessToken');
+        require APP . 'Vendor' . DS. 'autoload.php';
+        $fb = new Facebook\Facebook([
+          'app_id' => F_AID,
+          'app_secret' => F_SEC,
+          'default_graph_version' => 'v2.10',
+            'persistent_data_handler'=>'session'
+          ]);
+        
+        
 	}
     
     public function login() {

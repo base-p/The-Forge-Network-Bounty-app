@@ -36,7 +36,7 @@
                     <div class='fb-like' data-href='https://www.facebook.com/ForgeNetCoin/' data-layout='standard' data-action='like' data-show-faces='true'></div>
                     <h2>Share post</h2>
                     <?php if($days > 0) {?>
-                    <p>Earn <code id="estimate">Loading ...</code> by sharing the following post to your Facebook timeline:</p>
+                    <p>Earn <code id="estimate"><?= $fcount ?></code> by sharing the following post to your Facebook timeline:</p>
                     <div class='c-facebookPosts'>
                         <div class='c-facebookPosts__post'>
                             <p>Click here to share to Facebook</p>

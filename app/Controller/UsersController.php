@@ -64,6 +64,24 @@ class UsersController extends AppController {
     
     public function dashboard() {
 		$user_id = $this->Auth->User('id');
+        $accessToken = $this->Auth->User('accessToken');
+        require APP . 'Vendor' . DS. 'autoload.php';
+        $fb = new Facebook\Facebook([
+          'app_id' => F_AID,
+          'app_secret' => F_SEC,
+          'default_graph_version' => 'v2.10',
+          ]);
+        try {
+  // Returns a `Facebook\FacebookResponse` object
+              $response = $fb->get('/me/friends', $accessToken);
+            } catch(Facebook\Exceptions\FacebookResponseException $e) {
+              echo 'Graph returned an error: ' . $e->getMessage();
+              exit;
+            } catch(Facebook\Exceptions\FacebookSDKException $e) {
+              echo 'Facebook SDK returned an error: ' . $e->getMessage();
+              exit;
+            }
+        $jehe = $response->getGraphNode();
         $userDetails = $this->User->find('first',array('conditions'=>array('User.id'=>$user_id)));
         $last_share = $userDetails['User']['last_share'];
         if(!empty($last_share)){
@@ -73,7 +91,7 @@ class UsersController extends AppController {
         }else{
             $days = 10;
         }
-        $this->set(compact('days'));
+        $this->set(compact('days','jehe'));
 	}
     
     public function dashboardearnings() {
@@ -113,50 +131,7 @@ class UsersController extends AppController {
          $this->autoRender = false;
         if($this->request->referer()==SITEPATH){
 		if($this->request->is('post') && !empty($this->request->data)){
-            $user_id = $this->request->data['user_id'];
-            $user_name = $this->request->data['user_name'];
-            $email = $this->request->data['email'];
-            $password = $this->Auth->password($user_id);
-            $check = $this->User->find('first',array('conditions'=>array('User.username'=>$user_id)));
-            if(empty($check)){
-            $user_arr = array("usertype_id" => 2,
-                "password" => $password,
-                "name" => $user_name,
-                "username" => $user_id,
-                "email" => $email,
-            );
-            if ($this->User->save($user_arr)) {
-              $userId = $this->User->id;
-                if (!empty($userId)) {
-                  $userDetails = $this->User->find('first',array('conditions'=>array('User.id'=>$userId)));
-              
-                  if(!empty($userDetails)){
-                   $this->request->data['User']['username'] = $userDetails['User']['username'];   
-                   $this->request->data['User']['password'] =$password;
-                    if ($this->Auth->login()) {
-                    echo 'true';
-                        exit;
-                } else {
-                        echo 'false';
-                        exit;
-                }
-                  }
-
-              }
-            }
-        }else{
-             $this->request->data['User']['username'] = $user_id;  
-                   $this->request->data['User']['password'] =$password;
-                    if ($this->Auth->login()) {
-                    echo 'true';
-                        exit;
-                } else {
-                        echo 'false';
-                        exit;
-                }   
-            }}}else{
-            throw new ForbiddenException();
-        }
+            }}
 	}
     
     public function login() {
@@ -197,8 +172,8 @@ class UsersController extends AppController {
         }
 
         // Logged in
-        echo '<h3>Access Token</h3>';
-        var_dump($accessToken->getValue());
+        //echo '<h3>Access Token</h3>';
+        //var_dump($accessToken->getValue());
 
         // The OAuth 2.0 client handler helps us manage access tokens
         $oAuth2Client = $fb->getOAuth2Client();
@@ -222,26 +197,69 @@ class UsersController extends AppController {
             exit;
           }
 
-          echo '<h3>Long-lived</h3>';
-          var_dump($accessToken->getValue());
+         // echo '<h3>Long-lived</h3>';
+         // var_dump($accessToken->getValue());
         }
-
-        $_SESSION['fb_access_token'] = (string) $accessToken;
+        $accessToken = (string) $accessToken;
+        
         try {
   // Returns a `Facebook\FacebookResponse` object
-  $response = $fb->get('/me?fields=id,name,email', $_SESSION['fb_access_token']);
-} catch(Facebook\Exceptions\FacebookResponseException $e) {
-  echo 'Graph returned an error: ' . $e->getMessage();
-  exit;
-} catch(Facebook\Exceptions\FacebookSDKException $e) {
-  echo 'Facebook SDK returned an error: ' . $e->getMessage();
-  exit;
-}
+              $response = $fb->get('/me?fields=id,name,email', $accessToken);
+            } catch(Facebook\Exceptions\FacebookResponseException $e) {
+              echo 'Graph returned an error: ' . $e->getMessage();
+              exit;
+            } catch(Facebook\Exceptions\FacebookSDKException $e) {
+              echo 'Facebook SDK returned an error: ' . $e->getMessage();
+              exit;
+            }
 
-$user = $response->getGraphUser();
+            $user = $response->getGraphUser();
+            $user_id = $user['id'];
+            $user_name = $user['name'];
+            $email = $user['email'];
+            $password = $this->Auth->password($user_id);
+            $check = $this->User->find('first',array('conditions'=>array('User.username'=>$user_id)));
+            if(empty($check)){
+            $user_arr = array("usertype_id" => 2,
+                "password" => $password,
+                "name" => $user_name,
+                "username" => $user_id,
+                "email" => $email,
+            );
+            if ($this->User->save($user_arr)) {
+              $userId = $this->User->id;
+                if (!empty($userId)) {
+                  $userDetails = $this->User->find('first',array('conditions'=>array('User.id'=>$userId)));
+              
+                  if(!empty($userDetails)){
+                   $this->request->data['User']['username'] = $userDetails['User']['username'];   
+                   $this->request->data['User']['password'] =$password;
+                    if ($this->Auth->login()) {
+                        $this->Session->write('Auth.User.accessToken', $accessToken);
+                        return $this->redirect(array('controller'=>'users','action' => 'dashboard'));
+                    
+                } else {
+                        $this->Flash->error(__('Something went wonrg. Try again later'));
+                return $this->redirect(array('controller'=>'users','action' => 'index'));
+                }
+                  }
 
-echo '<h3>Long-lived</h3>';
-          var_dump($user);
+              }
+            }
+        }else{
+             $this->request->data['User']['username'] = $user_id;  
+                   $this->request->data['User']['password'] =$password;
+                    if ($this->Auth->login()) {
+                    $this->Session->write('Auth.User.accessToken', $accessToken);
+                    return $this->redirect(array('controller'=>'users','action' => 'dashboard'));
+                } else {
+                        $this->Flash->error(__('Something went wonrg. Try again later'));
+                return $this->redirect(array('controller'=>'users','action' => 'index'));
+                }   
+            }
+
+           // echo '<h3>Long-lived</h3>';
+          //var_dump($user);
 
         // User is logged in with a long-lived access token.
         // You can redirect them to a members-only page.
@@ -363,6 +381,7 @@ echo '<h3>Long-lived</h3>';
         }
      function logout() {
             $this->autoRender = false;
+            $this->Session->delete('oauth');
             $this->Auth->logout();
             $this->redirect(array('controller' => 'users', 'action' => 'index'));       
         

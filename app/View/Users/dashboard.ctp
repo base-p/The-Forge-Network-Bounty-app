@@ -2,13 +2,7 @@
 	var SITEPATH = '<?php echo SITEPATH; ?>';
  </script>
 <div id='fb-root'></div>
-        <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=307005293152978';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        
         <section class='l-row l-row--menu'>
             <div class='l-row__inner'>
                 <a href='/' class='c-minimalLogo'>
@@ -126,10 +120,5 @@
             </div>
         </section>
      <?php echo $this->CachedHtml->script('jquery');?>
-    <?php echo $this->CachedHtml->script('fbsdk');?>
+    <?php //echo $this->CachedHtml->script('fbsdk');?>
     <?php echo $this->CachedHtml->script('countDown');?>
-<script>
-    window.fbAsyncInit = function() {
-            checkLoginState2();
-    };
-</script>

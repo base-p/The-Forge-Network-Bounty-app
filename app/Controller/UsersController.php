@@ -46,11 +46,15 @@ class UsersController extends AppController {
  *   or MissingViewException in debug mode.
  */
 	public function index() {
+        if(!session_id()) {
+    session_start();
+}
         require APP . 'Vendor' . DS. 'autoload.php';
         $fb = new Facebook\Facebook([
           'app_id' => F_AID,
           'app_secret' => F_SEC,
           'default_graph_version' => 'v2.10',
+            'persistent_data_handler'=>'session'
           ]);
 
         $helper = $fb->getRedirectLoginHelper();
@@ -137,7 +141,11 @@ class UsersController extends AppController {
     
     public function login() {
          $this->autoRender = false;
+        if(!session_id()) {
+    session_start();
+}
         require APP . 'Vendor' . DS. 'autoload.php';
+        
         $fb = new Facebook\Facebook([
           'app_id' => F_AID,
           'app_secret' => F_SEC,

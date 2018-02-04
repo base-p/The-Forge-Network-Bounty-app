@@ -86,7 +86,7 @@ class UsersController extends AppController {
               echo 'Facebook SDK returned an error: ' . $e->getMessage();
               exit;
             }
-        $jehe = $response->getGraphNode();
+        $jehe = $response->getGraphEdge();
         $userDetails = $this->User->find('first',array('conditions'=>array('User.id'=>$user_id)));
         $last_share = $userDetails['User']['last_share'];
         if(!empty($last_share)){

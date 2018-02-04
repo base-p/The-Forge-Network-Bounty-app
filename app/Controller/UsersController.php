@@ -160,7 +160,7 @@ class UsersController extends AppController {
 	}
     
     public function login() {
-         //$this->autoRender = false;
+         $this->autoRender = false;
         require APP . 'Vendor' . DS. 'autoload.php';
         $fb = new Facebook\Facebook([
           'app_id' => F_AID,

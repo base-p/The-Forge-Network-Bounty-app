@@ -153,7 +153,7 @@ class UsersController extends AppController {
           exit;
         } catch(Facebook\Exceptions\FacebookSDKException $e) {
           // When validation fails or other local issues
-          echo 'Facebook SDK returned an error: ' . $e->getMessage();
+          echo 'Facebook SDK1 returned an error: ' . $e->getMessage();
           exit;
         }
 
@@ -209,7 +209,7 @@ class UsersController extends AppController {
               echo 'Graph returned an error: ' . $e->getMessage();
               exit;
             } catch(Facebook\Exceptions\FacebookSDKException $e) {
-              echo 'Facebook SDK returned an error: ' . $e->getMessage();
+              echo 'Facebook SDK2 returned an error: ' . $e->getMessage();
               exit;
             }
 

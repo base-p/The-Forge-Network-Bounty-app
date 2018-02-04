@@ -241,7 +241,8 @@ class UsersController extends AppController {
 
 $user = $response->getGraphUser();
 
-echo 'Name: ' . $user['name'];
+echo '<h3>Long-lived</h3>';
+          var_dump($user);
 
         // User is logged in with a long-lived access token.
         // You can redirect them to a members-only page.

@@ -87,6 +87,7 @@ class UsersController extends AppController {
               exit;
             }
         $jehe = $response->getGraphEdge();
+        $jehe = $jehe->getTotalCount();
         $userDetails = $this->User->find('first',array('conditions'=>array('User.id'=>$user_id)));
         $last_share = $userDetails['User']['last_share'];
         if(!empty($last_share)){

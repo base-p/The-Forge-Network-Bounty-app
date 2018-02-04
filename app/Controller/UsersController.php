@@ -159,8 +159,10 @@ class UsersController extends AppController {
         
         $feedEdge = $response->getGraphEdge();
         foreach ($feedEdge as $graphNode) {
-  var_dump($graphNode['link']);
-}
+        if(isset($graphNode['link'])){
+            var_dump($graphNode['link']);
+        }
+        }
         
 	}
     

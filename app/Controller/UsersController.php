@@ -162,10 +162,17 @@ class UsersController extends AppController {
         if(isset($graphNode['link'])){
         if($graphNode['link']=="https://theforgenetwork.com/"||$graphNode['link']=="https://shop.theforgenetwork.com/"||$graphNode['link']=="https://bounty.theforgenetwork.com/"){
             
-            if(strtotime((string)$graphNode['created_time']) > strtotime("-5 minutes")) {
+            $now = new DateTime();
+            $then = DateTime($graphNode['created_time']); // "2012-07-18 21:11:12" for example
+            $diff = $now->diff($then);
+            $minutes = ($diff->format('%a') * 1440) + // total days converted to minutes
+                       ($diff->format('%h') * 60) +   // hours converted to minutes
+                        $diff->format('%i');          // minutes
+            if ($minutes <= 5) {
                 var_dump($graphNode['link']);
                 var_dump($graphNode['created_time']);
             }
+            
         }}
         }
         

@@ -179,6 +179,8 @@ class UsersController extends AppController {
                 $earned = $this->Session->read('fcount');
             $user_id = $this->Auth->User('id');
             $ctime = $graphNode['created_time'];
+            $ctime->setTimezone(new DateTimeZone('Africa/Lagos'));
+                var_dump($ctime);
             $ctime=$ctime->format('Y-m-d H:i:s');
             $pmessage = $this->request->data['pmessage'];
             $upid = $this->request->data['upid'];

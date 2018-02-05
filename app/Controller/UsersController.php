@@ -67,6 +67,9 @@ class UsersController extends AppController {
     
     
     public function dashboard() {
+        if(!session_id()) {
+            session_start();
+        }
 		$user_id = $this->Auth->User('id');
         $accessToken = $this->Auth->User('accessToken');
         require APP . 'Vendor' . DS. 'autoload.php';
@@ -89,16 +92,18 @@ class UsersController extends AppController {
         $friendsEdge = $response->getGraphEdge();
         $fcount = $friendsEdge->getTotalCount();
         $fcount = 0.01*$fcount;
+        $this->Session->write('fcount', $fcount);
         $userDetails = $this->User->find('first',array('conditions'=>array('User.id'=>$user_id)));
         $last_share = $userDetails['User']['last_share'];
         if(!empty($last_share)){
             $createdobj = new DateTime($last_share);
+            $now = new DateTime('today');
             $days= $createdobj->diff(new DateTime('today'));
             $days=$days->format('%R%a');
         }else{
             $days = 10;
         }
-        $this->set(compact('days','fcount'));
+        $this->set(compact('days','fcount','createdobj','now'));
 	}
     
     public function dashboardearnings() {
@@ -171,6 +176,54 @@ class UsersController extends AppController {
             if ($minutes <= 5) {
                 var_dump($graphNode['link']);
                 var_dump($graphNode['created_time']);
+                $earned = $this->Session->read('fcount');
+            $user_id = $this->Auth->User('id');
+            $ctime = $graphNode['created_time'];
+            $ctime=$ctime->format('Y-m-d H:i:s');
+            $pmessage = $this->request->data['pmessage'];
+            $upid = $this->request->data['upid'];
+            $userDetails = $this->User->find('first',array('conditions'=>array('User.id'=>$user_id)));
+        $last_share = $userDetails['User']['last_share'];
+        if(!empty($last_share)){
+            $createdobj = new DateTime($last_share);
+            $days= $createdobj->diff(new DateTime('today'));
+            $days=$days->format('%R%a');
+        }else{
+            $days = 10;
+        }
+            if($days > 0){
+                $chpost =$this->Post->find('first',array('conditions'=>array('Post.user_post_id'=>$upid)));
+                if(empty($chpost)){
+            
+            $post_arr = array("user_id" => $user_id,
+                "earned" => $earned,
+                "posted_on" => $ctime,
+                "message" => $pmessage,
+                "user_post_id" => $upid,
+            );
+            if($this->Post->save($post_arr)) {
+              $last_post = date('Y-m-d H:i:s');
+                $db = $this->User->getDataSource();
+                $last_post1 = $db->value($last_post, 'string');
+                $this->User->updateAll(
+                    array('User.last_share'=>$last_post1),
+                    array('User.id' => $user_id)
+                );
+                echo 'true';
+                exit;
+            }else{
+                echo 'false';
+                exit;
+            }
+            }else{
+                echo 'true';
+                exit; 
+            }
+            }else{
+               echo 'true';
+                exit; 
+            }
+                break;
             }
             
         }}
@@ -317,8 +370,7 @@ class UsersController extends AppController {
     
     public function earning() {
          $this->autoRender = false;
-        if($this->request->referer()==SITEPATH.'users/dashboard'){
-		if($this->request->is('post') && !empty($this->request->data)){
+        
             
             $earned = $this->request->data['earned'];
             $user_id = $this->Auth->User('id');
@@ -368,9 +420,7 @@ class UsersController extends AppController {
                echo 'true';
                 exit; 
             }
-        }}else{
-            throw new ForbiddenException();
-        }
+        
 	}
     
     function admin_index() {

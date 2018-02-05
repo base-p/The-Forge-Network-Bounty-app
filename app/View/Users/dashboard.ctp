@@ -22,6 +22,7 @@
                         <li><a href='dashboardearnings'>Earnings</a></li>
                         <li><a href='logout'>Logout</a></li>
                     </ul>
+                    <?php echo $this->Session->flash(); ?>
                     <h2>Instructions</h2>
                     <ol>
                         <li>You must follows us on Twitter and Join our Telegram Channel.</li>

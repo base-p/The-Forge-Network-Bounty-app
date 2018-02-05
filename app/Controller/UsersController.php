@@ -180,10 +180,13 @@ class UsersController extends AppController {
             $user_id = $this->Auth->User('id');
             $ctime = $graphNode['created_time'];
             $ctime->setTimezone(new DateTimeZone('Africa/Lagos'));
-                var_dump($ctime);
             $ctime=$ctime->format('Y-m-d H:i:s');
-            $pmessage = $this->request->data['pmessage'];
-            $upid = $this->request->data['upid'];
+            if(isset($graphNode['message'])){
+                $pmessage = $graphNode['message'];
+            }else{
+                 $pmessage = 'N/A';
+            }
+            $upid = $graphNode['id'];
             $userDetails = $this->User->find('first',array('conditions'=>array('User.id'=>$user_id)));
         $last_share = $userDetails['User']['last_share'];
         if(!empty($last_share)){
@@ -204,32 +207,36 @@ class UsersController extends AppController {
                 "user_post_id" => $upid,
             );
             if($this->Post->save($post_arr)) {
-              $last_post = date('Y-m-d H:i:s');
+              $last_post = $ctime;
                 $db = $this->User->getDataSource();
                 $last_post1 = $db->value($last_post, 'string');
                 $this->User->updateAll(
                     array('User.last_share'=>$last_post1),
                     array('User.id' => $user_id)
                 );
-                echo 'true';
-                exit;
+                $this->Flash->success(__('Post Found!, You earned '.$earned.' FRG. Check Earnings for more details'));
+                return $this->redirect(array('controller'=>'users','action' => 'dashboard'));
             }else{
-                echo 'false';
-                exit;
+               $this->Flash->error(__('Post Found!, but something went wrong'));
+                return $this->redirect(array('controller'=>'users','action' => 'dashboard'));
             }
             }else{
-                echo 'true';
-                exit; 
+                $this->Flash->error(__('Duplicate post discarded!'));
+                return $this->redirect(array('controller'=>'users','action' => 'dashboard')); 
             }
             }else{
-               echo 'true';
-                exit; 
+               $this->Flash->error(__('Its less than 24 hours since last share!'));
+                return $this->redirect(array('controller'=>'users','action' => 'dashboard')); 
             }
                 break;
             }
             
+        }else{
+           
         }}
         }
+         $this->Flash->error(__('No Elligible Post found!'));
+                return $this->redirect(array('controller'=>'users','action' => 'dashboard')); 
         
 	}
     

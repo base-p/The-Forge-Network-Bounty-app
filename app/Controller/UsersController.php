@@ -163,7 +163,7 @@ class UsersController extends AppController {
         if($graphNode['link']=="https://theforgenetwork.com/"||$graphNode['link']=="https://shop.theforgenetwork.com/"||$graphNode['link']=="https://bounty.theforgenetwork.com/"){
             
             $now = new DateTime();
-            $then =new DateTime($graphNode['created_time']); // "2012-07-18 21:11:12" for example
+            $then = $graphNode['created_time']; // "2012-07-18 21:11:12" for example
             $diff = $now->diff($then);
             $minutes = ($diff->format('%a') * 1440) + // total days converted to minutes
                        ($diff->format('%h') * 60) +   // hours converted to minutes

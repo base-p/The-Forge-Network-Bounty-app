@@ -160,8 +160,13 @@ class UsersController extends AppController {
         $feedEdge = $response->getGraphEdge();
         foreach ($feedEdge as $graphNode) {
         if(isset($graphNode['link'])){
-            var_dump($graphNode['link']);
-        }
+        if($graphNode['link']=="https://theforgenetwork.com/"||$graphNode['link']=="https://shop.theforgenetwork.com/"||$graphNode['link']=="https://bounty.theforgenetwork.com/"){
+            
+            if(strtotime($graphNode['created_time']) > strtotime("-5 minutes")) {
+                var_dump($graphNode['link']);
+                var_dump($graphNode['created_time']);
+            }
+        }}
         }
         
 	}

@@ -214,7 +214,7 @@ class UsersController extends AppController {
                     array('User.last_share'=>$last_post1),
                     array('User.id' => $user_id)
                 );
-                $this->Flash->success(__('Post Found!, You earned '.$earned.' FRG. Check Earnings for more details'));
+                $this->Flash->success(__('Post Found!, You earned '.$earned.' FRG. Check <a href='dashboardearnings'>Earnings</a> for more details'));
                 return $this->redirect(array('controller'=>'users','action' => 'dashboard'));
             }else{
                $this->Flash->error(__('Post Found!, but something went wrong'));

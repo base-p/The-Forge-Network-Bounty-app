@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class='c-mastHead__fbLogin'>
-                        <a href="<?= $loginUrl ?>">Log in with Facebook!</a>
+                        <a href="<?= $loginUrl ?>"><?php echo $this->Html->image('cfb.png',['width'=>'300','alt'=>'']); ?></a>
                     </div>
                 </div>
             </div>

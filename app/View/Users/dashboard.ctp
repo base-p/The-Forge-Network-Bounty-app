@@ -34,7 +34,7 @@
                         <li>You must follows us on Twitter and Join our Telegram Channel.</li>
                         <li>You must like our Facebook page.</li>
                         <li>Click one of the banners below to share post.</li>
-                        <li>You earn FRG by clicking retrieve button below after sharing. You have 5 minutes after share to click retrieve. Posts older than 5 mins will not be retrieved by our system</li>
+                        <li>You earn FRG by clicking <code>Retrieve</code> button below after sharing. You have 5 minutes after share to click retrieve. Posts older than 5 mins will not be retrieved by our system</li>
                         <li>You can share the post once in 24 hours. Every share earns you more FRG.</li>
                         <li>All shares will be registered by us (see <a href='dashboardearnings'>earnings</a>) and paid out to your FRG wallet (see <a href='dashboardsettings'>settings</a>).</li>
                         <li>Make sure to personalize the text you share the post with. Make it interesting. Atleast 200 characters!</li>

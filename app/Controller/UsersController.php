@@ -127,7 +127,16 @@ class UsersController extends AppController {
         $this->set(compact('name','address'));
         
         if($this->request->is('post') && !empty($this->request->data)){
+            
             $address = $this->request->data['address'];
+            if(!empty($this->request->data['address'])){
+            if (preg_match("/^F[0-9a-zA-Z]{33}$/", $this->request->data['address'])) {
+            } else {
+                $this->Flash->error(__('Invalid FRG address'));
+                return $this->redirect(array('controller'=>'users','action' => 'dashboardsettings'));
+            }}else{
+                 $frg_wallet=NULL;
+             }
             $db = $this->User->getDataSource();
                 $address1 = $db->value($address, 'string');
                 $this->User->updateAll(

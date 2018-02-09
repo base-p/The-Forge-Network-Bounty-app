@@ -28,12 +28,12 @@
                     <?php echo $this->Session->flash(); ?>
                         <p class='c-form__row'>
                             <span class='c-form__label'>Name</span>
-                            <span class='c-form__field'><?php echo $name; ?></span>
+                            <span class='c-form__field'><?php echo h($name); ?></span>
                         </p>
                         
                         <p class='c-form__row'>
                             <label for='wallet' class='c-form__label'>Wallet address</label>
-                            <input id='wallet' type='text' class='c-form__field' value="<?php echo $address; ?>" name='data[address]'/>
+                            <input id='wallet' type='text' class='c-form__field' value="<?php echo h($address); ?>" name='data[address]'/>
                         </p>
                         <p class='c-form__row'>
                             <button type='submit'>Save my settings</button>

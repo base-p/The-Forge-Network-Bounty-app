@@ -61,6 +61,12 @@
                             
                         </div>
                     </div>
+                    <h2>Share post</h2>
+                    <ul class='c-dashboardMenu'>
+                       
+                        <li><a href='retrieve'>Settings</a></li>
+                        
+                    </ul>
                     <?php }else{ ?>
                         <p>You have to wait <code>24 hours</code> before you can share again.</p>
                     <?php } ?>

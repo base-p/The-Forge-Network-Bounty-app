@@ -33,7 +33,8 @@
                     <ol>
                         <li>You must follows us on Twitter and Join our Telegram Channel.</li>
                         <li>You must like our Facebook page.</li>
-                        <li>You earn FRG by sharing the post below.</li>
+                        <li>Click one of the banners below to share post.</li>
+                        <li>You earn FRG by clicking retrieve button below after sharing. You have 5 minutes after share to click retrieve. Posts older than 5 mins will not be retrieved by our system</li>
                         <li>You can share the post once in 24 hours. Every share earns you more FRG.</li>
                         <li>All shares will be registered by us (see <a href='dashboardearnings'>earnings</a>) and paid out to your FRG wallet (see <a href='dashboardsettings'>settings</a>).</li>
                         <li>Make sure to personalize the text you share the post with. Make it interesting. Atleast 200 characters!</li>
@@ -43,7 +44,7 @@
                     <div class='fb-like' data-href='https://www.facebook.com/ForgeNetCoin/' data-layout='standard' data-action='like' data-show-faces='true'></div>
                     <h2>Share post</h2>
                     <?php if($days > 0) {?>
-                    <p>Earn <code id="estimate"><?= $fcount ?></code> by sharing the following post to your Facebook timeline:</p>
+                    <p>Earn <code id="estimate"><?= $fcount ?></code> by sharing one of the following posts to your Facebook timeline:</p>
                     <div class='c-facebookPosts'>
                         <div class='c-facebookPosts__post' linkdata="https://bounty.theforgenetwork.com/">
                             <p>Click here to share Post 1 to Facebook</p>
@@ -61,10 +62,10 @@
                             
                         </div>
                     </div>
-                    <h2>Share post</h2>
+                    <h2>Retrieve post</h2>
                     <ul class='c-dashboardMenu'>
                        
-                        <li><a href='retrieve'>Settings</a></li>
+                        <li><a href='retrieve'>Retrieve</a></li>
                         
                     </ul>
                     <?php }else{ ?>
@@ -78,7 +79,7 @@
         <section class='l-row l-row--footer'>
             <div class='l-row__inner'>
                 <div class='l-row--footer__first'>
-                    <h2>Early bird sale starting soon</h2>
+                    <h2>ICO starting soon</h2>
                     <div class='c-countDown'>
                         <ul class='c-countDown__list'>
                             <li>

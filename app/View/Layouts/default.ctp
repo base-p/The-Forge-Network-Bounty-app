@@ -16,6 +16,11 @@
             echo $this->fetch('css');
             echo $this->fetch('script');
 	   ?>
+        <meta property="og:title" content="Earn free Cryptocurrency in ForgeNet's Bounty Campaign" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bounty.theforgenetwork.com/" />
+        <meta property="og:image" content="https://bounty.theforgenetwork.com/img/ogimage.jpg" />
+        <meta property="og:description" content="Click here to participate in The Forge Network's Bounty campaign and receive free FRG coins." /> 
     </head>
 <body>
   

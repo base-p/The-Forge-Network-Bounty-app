@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class='c-mastHead__fbLogin'>
-                        <a href="<?= $loginUrl ?>"><?php echo $this->Html->image('cfb.png',['width'=>'300','alt'=>'']); ?></a>
+                        <a href="<?= $loginUrl ?>"><?php echo $this->Html->image('cfb.png',['width'=>'200','alt'=>'']); ?></a>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
         <section class='l-row l-row--footer'>
             <div class='l-row__inner'>
                 <div class='l-row--footer__first'>
-                    <h2>Early bird sale starting soon</h2>
+                    <h2>ICO starting soon</h2>
                     <div class='c-countDown'>
                         <ul class='c-countDown__list'>
                             <li>

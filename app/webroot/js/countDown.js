@@ -41,7 +41,7 @@
     }
 
     var timers = document.querySelectorAll('.c-countDown');
-    var deadline = new Date('2018-01-27T00:00:00');
+    var deadline = new Date('2018-02-24T00:00:00');
 
     timers.forEach(function (timer) {
         initializeClock(timer, deadline);

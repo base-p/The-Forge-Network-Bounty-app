@@ -46,18 +46,14 @@
                     <?php if($days > 0) {?>
                     <p>Earn <code id="estimate"><?= $fcount ?></code> by sharing one of the following posts to your Facebook timeline:</p>
                     <div class='c-facebookPosts'>
-                        <div class='c-facebookPosts__post' linkdata="https://bounty.theforgenetwork.com/">
+                        
+                        <div class='c-facebookPosts__post' linkdata="https://shop.theforgenetwork.com/">
                             <p>Click here to share Post 1 to Facebook</p>
                             <?php echo $this->Html->image('share-image.jpg',['alt'=>'']); ?>
                             
                         </div>
-                        <div class='c-facebookPosts__post' linkdata="https://shop.theforgenetwork.com/">
-                            <p>Click here to share Post 2 to Facebook</p>
-                            <?php echo $this->Html->image('share-image.jpg',['alt'=>'']); ?>
-                            
-                        </div>
                         <div class='c-facebookPosts__post' linkdata="https://theforgenetwork.com/">
-                            <p>Click here to share Post 3 to Facebook</p>
+                            <p>Click here to share Post 2 to Facebook</p>
                             <?php echo $this->Html->image('share-image.jpg',['alt'=>'']); ?>
                             
                         </div>

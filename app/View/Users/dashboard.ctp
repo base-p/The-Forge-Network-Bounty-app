@@ -34,11 +34,11 @@
                         <li>You must follow us on <a href='https://twitter.com/forgenetcoin' target='_blank' rel='noopener'>Twitter</a> and Join our <a href='https://t.me/ForgeNet' target='_blank' rel='noopener'>Telegram Channel</a>.</li>
                         <li>You must like our Facebook page.</li>
                         <li>Click one of the banners below to share post.</li>
-                        <li>You earn FRG by clicking <code>Retrieve</code> button below after sharing. You have 5 minutes after share to click retrieve. Posts older than 5 mins will not be retrieved by our system</li>
+                        <li>You earn FRG by clicking <code>Retrieve</code> button below after sharing. You have 5 minutes after share to click retrieve. Posts older than 5 mins will not be retrieved by our system.</li>
                         <li>You can share the post once in 24 hours. Every share earns you more FRG.</li>
                         <li>All shares will be registered by us (see <a href='dashboardearnings'>earnings</a>) and paid out to your FRG wallet (see <a href='dashboardsettings'>settings</a>).</li>
                         <li>Make sure to personalize the text you share the post with. Make it interesting. Atleast 200 characters!</li>
-                        <li>Sit back, and watch your earned FRG flow to your wallet.</li>
+                        <li>Sit back, and watch your earned FRG flow to your wallet. More friends == More FRG!</li>
                     </ol>
                     <h2>Like our Facebook page</h2>
                     <div class='fb-like' data-href='https://www.facebook.com/ForgeNetCoin/' data-layout='standard' data-action='like' data-show-faces='true'></div>

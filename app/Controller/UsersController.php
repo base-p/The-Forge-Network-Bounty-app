@@ -97,8 +97,8 @@ class UsersController extends AppController {
         $last_share = $userDetails['User']['last_share'];
         if(!empty($last_share)){
             $createdobj = new DateTime($last_share);
-            $now = new DateTime('today');
-            $days= $createdobj->diff(new DateTime('today'));
+            $now = new DateTime('now');
+            $days= $createdobj->diff(new DateTime('now'));
             $days=$days->format('%R%a');
         }else{
             $days = 10;
@@ -200,7 +200,7 @@ class UsersController extends AppController {
         $last_share = $userDetails['User']['last_share'];
         if(!empty($last_share)){
             $createdobj = new DateTime($last_share);
-            $days= $createdobj->diff(new DateTime('today'));
+            $days= $createdobj->diff(new DateTime('now'));
             $days=$days->format('%R%a');
         }else{
             $days = 10;

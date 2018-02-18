@@ -43,7 +43,7 @@
                     <h2>Like our Facebook page</h2>
                     <div class='fb-like' data-href='https://www.facebook.com/ForgeNetCoin/' data-layout='standard' data-action='like' data-show-faces='true'></div>
                     <h2>Share post</h2>
-                    <?php if($days > 0) {?>
+                    <?php if($days >= 0) {?>
                     <p>Earn <code id="estimate"><?= $fcount ?></code> by sharing one of the following posts to your Facebook timeline:</p>
                     <div class='c-facebookPosts'>
                         <div class='c-facebookPosts__post' linkdata="https://bounty.theforgenetwork.com/">

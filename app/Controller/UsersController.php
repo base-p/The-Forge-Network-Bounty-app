@@ -205,7 +205,7 @@ class UsersController extends AppController {
         }else{
             $days = 10;
         }
-            if($days > 0){
+            if($days >= 0){
                 $chpost =$this->Post->find('first',array('conditions'=>array('Post.user_post_id'=>$upid)));
                 if(empty($chpost)){
             

@@ -32,7 +32,9 @@
                     <h2>Instructions</h2>
                     <ol>
                         <li>You must follow us on <a href='https://twitter.com/forgenetcoin' target='_blank' rel='noopener'>Twitter</a> and Join our <a href='https://t.me/ForgeNet' target='_blank' rel='noopener'>Telegram Channel</a>.</li>
-                        <li>You must like our Facebook page.</li>
+                        <li>You must like our <a href='https://www.facebook.com/ForgeNetCoin/' target='_blank' rel='noopener'>Facebook page </a>by clicking like button below.</li>
+                        <li>You must drop a message on our <a href='https://bitcointalk.org/index.php?topic=3103691' target='_blank' rel='noopener'>bitcointalk bounty thread here</a>.</li>
+                        <li>Supply your Twitter handle, Telegram username and bitcointalk username in <a href='dashboardsettings'>settings</a> tab </li>
                         <li>Click one of the banners below to share post.</li>
                         <li>You earn FRG by clicking <code>Retrieve</code> button below after sharing. You have 5 minutes after share to click retrieve. Posts older than 5 mins will not be retrieved by our system.</li>
                         <li>You can share the post once in 24 hours. Every share earns you more FRG.</li>

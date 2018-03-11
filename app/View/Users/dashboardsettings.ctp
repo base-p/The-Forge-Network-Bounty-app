@@ -36,6 +36,18 @@
                             <input id='wallet' type='text' class='c-form__field' value="<?php echo h($address); ?>" name='data[address]'/>
                         </p>
                         <p class='c-form__row'>
+                            <label for='twitter' class='c-form__label'>Twitter Handle</label>
+                            <input id='twitter' type='text' class='c-form__field' value="<?php echo h($twitter); ?>" name='data[twitter]'/>
+                        </p>
+                        <p class='c-form__row'>
+                            <label for='btctalk' class='c-form__label'>Bitcointalk Username</label>
+                            <input id='btctalk' type='text' class='c-form__field' value="<?php echo h($btctalk); ?>" name='data[btctalk]'/>
+                        </p>
+                        <p class='c-form__row'>
+                            <label for='telegram' class='c-form__label'>Telegram Username</label>
+                            <input id='telegram' type='text' class='c-form__field' value="<?php echo h($telegram); ?>" name='data[telegram]'/>
+                        </p>
+                        <p class='c-form__row'>
                             <button type='submit'>Save my settings</button>
                         </p>
                    <?php echo $this->Form->end(); ?>

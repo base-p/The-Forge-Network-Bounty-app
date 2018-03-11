@@ -124,11 +124,17 @@ class UsersController extends AppController {
         $userDetails = $this->User->find('first',array('conditions'=>array('User.id'=>$user_id)));
         $name = $userDetails['User']['name'];
         $address  = $userDetails['User']['address'];
-        $this->set(compact('name','address'));
+        $twitter  = $userDetails['User']['twitter'];
+        $btctalk  = $userDetails['User']['btctalk'];
+        $telegram  = $userDetails['User']['telegram'];
+        $this->set(compact('name','address','twitter','btctalk','telegram'));
         
         if($this->request->is('post') && !empty($this->request->data)){
             
             $address = $this->request->data['address'];
+            $twitter = $this->request->data['twitter'];
+            $btctalk = $this->request->data['btctalk'];
+            $telegram = $this->request->data['telegram'];
             if(!empty($this->request->data['address'])){
             if (preg_match("/^F[0-9a-zA-Z]{33}$/", $this->request->data['address'])) {
             } else {
@@ -139,8 +145,11 @@ class UsersController extends AppController {
              }
             $db = $this->User->getDataSource();
                 $address1 = $db->value($address, 'string');
+                $twitter1 = $db->value($twitter, 'string');
+                $btctalk1 = $db->value($btctalk, 'string');
+                $telegram1 = $db->value($telegram, 'string');
                 $this->User->updateAll(
-                    array('User.address'=>$address1),
+                    array('User.address'=>$address1,'User.twitter'=>$twitter1,'User.btctalk'=>$btctalk1,'User.telegram'=>$telegram1,),
                     array('User.id' => $user_id)
                 );
             $this->Session->setFlash("Your setting have been Saved!", 'default', array('class' => 'message'));

@@ -58,7 +58,7 @@
         <section class='l-row l-row--footer'>
             <div class='l-row__inner'>
                 <div class='l-row--footer__first'>
-                    <h2>ICO starting soon</h2>
+                    <h2><a href='https://shop.theforgenetwork.com/' target='_blank' rel='noopener'>Click Here to Join ICO.</a> ICO ends in</h2>
                     <div class='c-countDown'>
                         <ul class='c-countDown__list'>
                             <li>
